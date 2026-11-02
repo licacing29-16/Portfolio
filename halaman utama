@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lica Nurfitria — Multimedia Specialist, E-Learning Developer & CapCut Trainer</title>
+<meta name="description" content="Portfolio of Lica Nurfitria: corporate e-learning, video editing, motion graphics, CapCut training and brand identity. Based in Jakarta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#2D47A6; --cream:#FAF6F0; --ink:#1B1A17; --muted:#4A473F;
+  --yellow:#FFCB2F; --line:#E6DFD3; --pad:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:'Poppins',system-ui,sans-serif;line-height:1.55}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+h1,h2,h3{margin:0}
+h2{font-size:clamp(34px,5vw,52px);font-weight:800;letter-spacing:-1px;line-height:1.1}
+
+/* nav */
+nav{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;padding-top:24px;padding-bottom:24px}
+.brand{font-weight:800;font-size:22px;text-decoration:none;color:var(--blue)}
+.links{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;font-size:15px;font-weight:600}
+.links a{text-decoration:none;padding:10px 0}
+.links .pill{padding:10px 20px;background:var(--blue);color:#fff;border-radius:999px}
+
+/* buttons */
+.btn{display:inline-block;text-decoration:none;font-weight:600;padding:16px 32px;border-radius:999px;border:2px solid transparent;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.solid{background:var(--blue);color:#fff}
+.btn.line{border-color:var(--blue);color:var(--blue)}
+
+/* hero */
+header.hero{display:flex;flex-wrap:wrap;gap:48px;align-items:center;padding-top:48px;padding-bottom:96px}
+.hero .text{flex:1 1 440px}
+.hero .kicker{margin:0 0 16px;font-size:15px;font-weight:600;color:#5A5750}
+.hero h1{font-size:clamp(48px,8vw,96px);line-height:1;font-weight:800;letter-spacing:-2px;color:var(--blue)}
+.hero .lead{margin:24px 0 0;font-size:20px;max-width:560px;color:#3B3932}
+.hero .cta{display:flex;flex-wrap:wrap;gap:16px;margin-top:36px}
+.hero .art{flex:1 1 320px;display:flex;justify-content:center}
+.blob{position:relative;width:min(380px,100%);aspect-ratio:1/1.1}
+.blob .shape{position:absolute;inset:0;background:var(--blue);border-radius:48% 52% 44% 56%/52% 44% 56% 48%}
+.blob .dot{position:absolute;right:-8px;top:24px;width:96px;height:96px;background:var(--yellow);border-radius:50%}
+.blob .photo{position:absolute;inset:36px;border-radius:32px;background:#E8E1D4;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;color:#5A5750;font-size:14px;font-weight:600}
+.blob .photo img{width:100%;height:100%;object-fit:cover}
+
+/* stats */
+.stats{background:var(--blue);color:#fff;padding-top:64px;padding-bottom:64px}
+.stats .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px}
+.stats strong{display:block;font-size:56px;font-weight:800;line-height:1;color:var(--yellow)}
+.stats p{margin:8px 0 0;font-size:15px}
+
+/* work */
+#work{padding-top:96px;padding-bottom:48px}
+#work .intro{margin:12px 0 48px;font-size:17px;color:var(--muted);max-width:620px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.card .cover{height:150px;display:flex;align-items:flex-end;padding:20px;font-weight:800;font-size:28px;color:#fff}
+.card .cover img{width:100%;height:100%;object-fit:cover}
+.card .body{padding:20px 22px 24px}
+.card .tag{margin:0 0 6px;font-size:13px;font-weight:600;color:#5A5750}
+.card h3{font-size:19px;margin-bottom:8px}
+.card p.desc{margin:0;font-size:14.5px;color:var(--muted)}
+
+/* about */
+#about{display:flex;flex-wrap:wrap;gap:48px;padding-top:96px;padding-bottom:96px}
+#about .title{flex:1 1 320px}
+#about .content{flex:2 1 460px}
+#about .big{margin:0 0 20px;font-size:19px;color:#3B3932}
+#about .sub{margin:0 0 28px;font-size:17px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:0;list-style:none}
+.chips li{padding:8px 18px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:14px;font-weight:600}
+
+/* experience */
+#experience{padding-bottom:96px}
+#experience h2{margin-bottom:40px}
+.timeline{border-top:2px solid var(--ink)}
+.row{display:flex;flex-wrap:wrap;gap:16px 48px;padding:28px 0;border-bottom:1px solid #D8D0C2}
+.row .when{flex:1 1 200px;font-weight:600;color:var(--blue)}
+.row .what{flex:3 1 400px}
+.row h3{font-size:22px}
+.row .org{margin:4px 0 8px;font-weight:600;color:#5A5750}
+.row p.d{margin:0;font-size:15.5px;color:var(--muted)}
+
+/* contact */
+#contact{background:var(--blue);color:#fff;padding-top:96px;padding-bottom:96px}
+#contact h2{font-size:clamp(44px,8vw,88px);line-height:1.05;letter-spacing:-2px}
+#contact .lead{margin:24px 0 40px;font-size:19px;max-width:560px}
+#contact .actions{display:flex;flex-wrap:wrap;gap:16px}
+#contact .btn.yellow{background:var(--yellow);color:var(--ink)}
+#contact .btn.outline{border-color:#fff;color:#fff}
+#contact .foot{margin:64px 0 0;font-size:14px;opacity:.9}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav aria-label="Main">
+    <a class="brand" href="#top">Lica Nurfitria</a>
+    <div class="links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a class="pill" href="#contact">Contact</a>
+    </div>
+  </nav>
+</div>
+
+<header class="hero wrap" id="top">
+  <div class="text">
+    <p class="kicker">Multimedia, e-learning and video</p>
+    <h1>Hi, I’m Lica.</h1>
+    <p class="lead">Multimedia specialist, e-learning developer and CapCut trainer. I turn complex material into videos, animations and learning modules people actually enjoy.</p>
+    <div class="cta">
+      <a class="btn solid" href="#work">See my work</a>
+      <a class="btn line" href="#contact">Let’s talk</a>
+    </div>
+  </div>
+  <div class="art">
+    <div class="blob">
+      <div class="shape"></div>
+      <div class="dot"></div>
+      <!-- Ganti dengan fotomu: <img src="foto-lica.jpg" alt="Foto Lica Nurfitria"> -->
+      <div class="photo">[YOUR PHOTO]</div>
+    </div>
+  </div>
+</header>
+
+<section class="stats" aria-label="Highlights">
+  <div class="wrap grid">
+    <div><strong>5+</strong><p>years in content creation, video editing and motion graphics</p></div>
+    <div><strong>7→4</strong><p>days: training time cut with the Astra Otoparts e-learning center</p></div>
+    <div><strong>~50</strong><p>participants in CapCut webinars for public and corporate clients</p></div>
+    <div><strong>5</strong><p>major corporate clients: Astra Otoparts, BCA, BCAF, BCM, K-24</p></div>
+  </div>
+</section>
+
+<section class="wrap" id="work">
+  <h2>Selected work</h2>
+  <p class="intro">Corporate learning, social content and brand building, from storyboard to final export.</p>
+  <div class="cards">
+
+    <article class="card">
+      <div class="cover" style="background:#B3262E">Astra Otoparts</div>
+      <div class="body"><p class="tag">Interactive e-learning</p><h3>Virtual Learning Center</h3>
+      <p class="desc">Custom illustrations, motion graphics and quiz interfaces for internal employee development.</p></div>
+    </article>
+
+    <article class="card">
+      <div class="cover" style="background:#1F5FBF">BCA</div>
+      <div class="body"><p class="tag">Motion, 2D animation and live action</p><h3>Sales enablement videos</h3>
+      <p class="desc">Reference videos, animated app tutorials and roleplay scenes for sales teams in the field.</p></div>
+    </article>
+
+    <article class="card">
+      <div class="cover" style="background:#2D47A6">BCA Finance</div>
+      <div class="body"><p class="tag">Webinar editing</p><h3>Learning &amp; Development in a New Era</h3>
+      <p class="desc">Long webinar recordings cut into short highlight videos around each speaker’s key insights.</p></div>
+    </article>
+
+    <article class="card">
+      <div class="cover" style="background:#0B1B3A">BCM</div>
+      <div class="body"><p class="tag">Business continuity training</p><h3>Executive roadshow assets</h3>
+      <p class="desc">Visual assets and 2D animations used by the Board of Directors in client roadshows.</p></div>
+    </article>
+
+    <article class="card">
+      <div class="cover" style="background:#1E7A32">Apotek K-24</div>
+      <div class="body"><p class="tag">Microlearning</p><h3>Visual guides for pharmacy staff</h3>
+      <p class="desc">Operational training turned into clear, easy-to-follow graphics.</p></div>
+    </article>
+
+    <article class="card">
+      <div class="cover" style="background:#3C5BBF">Emma Michi</div>
+      <div class="body"><p class="tag">VTuber edutainment</p><h3>Video and content strategy</h3>
+      <p class="desc">Educational videos on YouTube, Instagram and TikTok; the channel reached full organic monetization.</p></div>
+    </article>
+
+    <article class="card">
+      <div class="cover" style="background:#1A1550">CapCut Training</div>
+      <div class="body"><p class="tag">Workshops and facilitation</p><h3>Editing for non-editors</h3>
+      <p class="desc">Public and corporate webinars on editing hacks, layering and storytelling.</p></div>
+    </article>
+
+    <article class="card">
+      <div class="cover" style="background:#FFB4A0;color:#1B1A17">EXA Instagram</div>
+      <div class="body"><p class="tag">Social media strategy</p><h3>Employer branding and recruitment</h3>
+      <p class="desc">Carousels and hiring announcements that grow candidate engagement.</p></div>
+    </article>
+
+    <article class="card">
+      <div class="cover" style="background:#FFCB2F;color:#1B1A17">Cakison</div>
+      <div class="body"><p class="tag">F&amp;B brand identity</p><h3>Visual system from the ground up</h3>
+      <p class="desc">Logo, packaging and promo visuals built for strong market appeal.</p></div>
+    </article>
+
+  </div>
+</section>
+
+<section class="wrap" id="about">
+  <div class="title"><h2>About</h2></div>
+  <div class="content">
+    <p class="big">I’m a Jakarta-based multimedia and e-learning specialist with over five years of experience in content creation, video editing, motion graphics and creative team leadership.</p>
+    <p class="sub">I develop interactive learning modules for corporate clients, run professional video editing workshops, and build brands from scratch. Bachelor of Design (Management Design), Telkom University.</p>
+    <ul class="chips" aria-label="Skills">
+      <li>Premiere Pro</li><li>Photoshop</li><li>Illustrator</li><li>Captivate</li>
+      <li>Audition</li><li>CapCut</li><li>2D animation</li><li>Motion graphics</li>
+    </ul>
+  </div>
+</section>
+
+<section class="wrap" id="experience">
+  <h2>Experience</h2>
+  <div class="timeline">
+    <div class="row">
+      <div class="when">Aug 2021 – Present</div>
+      <div class="what"><h3>Lead Creative &amp; Multimedia Specialist</h3><p class="org">PT EXA Mitra Solusi</p>
+      <p class="d">Corporate e-learning modules, VTuber content and music videos, CapCut workshops, and social media strategy.</p></div>
+    </div>
+    <div class="row">
+      <div class="when">Mar 2019 – May 2021</div>
+      <div class="what"><h3>Internal E-Learning Specialist</h3><p class="org">PT Astra Otoparts Tbk</p>
+      <p class="d">Interactive training modules with custom illustrations, motion graphics and video.</p></div>
+    </div>
+    <div class="row">
+      <div class="when">Internship</div>
+      <div class="what"><h3>Digital Marketing Intern</h3><p class="org">Barli Asmara</p>
+      <p class="d">Social content for the White by BA and Belle sub-brands.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Let’s work<br>together.</h2>
+    <p class="lead">Open to full-time roles, freelance projects and creative collaborations.</p>
+    <div class="actions">
+      <a class="btn yellow" href="mailto:licanurfitria@gmail.com">licanurfitria@gmail.com</a>
+      <a class="btn outline" href="https://wa.me/6287776635604">WhatsApp</a>
+      <!-- Ganti # dengan link LinkedIn-mu -->
+      <a class="btn outline" href="#">LinkedIn</a>
+    </div>
+    <p class="foot">Jakarta, Indonesia · © 2026 Lica Nurfitria</p>
+  </div>
+</section>
+
+</body>
+</html>
